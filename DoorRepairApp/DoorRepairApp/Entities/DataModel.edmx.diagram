@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b304c8d3961446f8b89ced80ef2db3d3" Name="Diagram1">
+        <EntityTypeShape EntityType="DoorRepairDBModel.Category" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.Door" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.Order" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.OrderDoor" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.OrderService" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.Role" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.Service" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.sysdiagram" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoorRepairDBModel.User" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_Door_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_Service_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_OrderDoor_Door" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_OrderDoor_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_OrderService_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_OrderService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="DoorRepairDBModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
