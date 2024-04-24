@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DoorRepairApp.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ShowOrderPage">
+      Title="Заказ">
 
     <Grid>
         <Grid.ColumnDefinitions>

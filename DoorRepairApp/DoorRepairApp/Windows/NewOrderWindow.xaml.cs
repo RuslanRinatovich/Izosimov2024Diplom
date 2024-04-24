@@ -52,6 +52,7 @@ namespace DoorRepairApp.Windows
 
             TextBlockTotalCost.Text = $"Итого {DoorBasket.GetTotalCost+ ServiceBasket.GetTotalCost:C}";
             DatePickerDate.SelectedDate = DateTime.Today;
+            TimePickerTime.SelectedTime = DateTime.Now;
             //TextBlockOrderCreateDate.Text = _currentOrder.DateOrder.ToLongDateString();
 
         }
