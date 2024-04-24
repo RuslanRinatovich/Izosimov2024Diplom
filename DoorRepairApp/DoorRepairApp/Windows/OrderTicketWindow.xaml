@@ -5,8 +5,146 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoorRepairApp.Windows"
         mc:Ignorable="d"
-        Title="OrderTicketWindow" Height="450" Width="800">
+         Title="Талон"   Height="500"
+        Width="600" MinHeight="400" MinWidth="400" 
+        WindowStartupLocation="CenterScreen"
+        Icon="/DoorRepairApp;component/Resources/door.ico">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Background="White" Grid.ColumnSpan="2" />
+        <Image Source="/DoorRepairApp;component/Resources/door.ico" 
+               Margin="10" 
+               HorizontalAlignment="Left" />
+        <TextBlock Grid.Row="0" Text="Фирма по установке и обслуживанию дверей"  Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                  
+                   FontSize="20"
+                   FontWeight="Bold" />
+        <TextBlock  Text="Заказ №"  Grid.Row="1" Grid.Column="0"
+                    Grid.ColumnSpan="2"  x:Name="TextBlockOrderNumber"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold" />
+
+        <TextBlock Text="Дата"  Grid.Row="2" Grid.Column="0" 
+                   HorizontalAlignment="Left" Margin="60 0 0 0" 
+                   VerticalAlignment="Center"
+                  Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                   FontWeight="Bold" />
+        <TextBlock x:Name="TextBlockOrderCreateDate"
+                   Grid.Row="2" Grid.Column="1"  
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left" 
+                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                   FontWeight="Bold"  />
+
+
+        <DataGrid x:Name="DataGridDoorsOrder" Grid.Row="4"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Grid.ColumnSpan="2"
+                  SelectionMode="Single"
+                  LoadingRow="DataGridGoodLoadingRow">
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn Width="100" 
+                                      
+                                        Header="Изображение">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Path=Key.GetPhoto}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding Key.Title}"
+                                    
+                                    Header="Дверь" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Key.Category.Title}"
+                                    
+                                    Header="Категория" Width="*"/>
+             
+                <DataGridTextColumn Binding="{Binding Value.Count}"
+                                    
+                                    Header="Количество" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Key.Price, StringFormat='c', ConverterCulture='ru-RU'}"
+                                    
+                                    Header="Стоимость" Width="*"/>
+
+                <DataGridTextColumn Binding="{Binding Value.Total, StringFormat='c', ConverterCulture='ru-RU'}"
+                                   
+                                    Header="ИТОГО" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Rectangle  Grid.Row="3" Grid.ColumnSpan="2" Fill="{DynamicResource MaterialDesignDarkSeparatorBackground}"/>
+        <TextBlock  Text="Двери"  Grid.Row="3" Grid.Column="0" 
+                    Grid.ColumnSpan="2"  
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold" />
+        <Rectangle  Grid.Row="5" Grid.ColumnSpan="2" Fill="{DynamicResource MaterialDesignDarkSeparatorBackground}" />
+        <TextBlock  Text="Услуги"  Grid.Row="5" Grid.Column="0" 
+                    Grid.ColumnSpan="2"  
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold" />
+        <DataGrid x:Name="DataGridServicesOrder" Grid.Row="6"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Grid.ColumnSpan="2"
+                  SelectionMode="Single"
+                  LoadingRow="DataGridGoodLoadingRow">
+            <DataGrid.Columns>
+             
+                <DataGridTextColumn Binding="{Binding Key.Title}"
+                                    
+                                    Header="Наименование услуги" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Key.Category.Title}"
+                                    
+                                    Header="Категория" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Value.Count}"
+                                    
+                                    
+                                    Header="Количество" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Key.Price, StringFormat='c', ConverterCulture='ru-RU'}"
+                                    
+                                    Header="Стоимость" Width="*"/>
+
+                <DataGridTextColumn Binding="{Binding Value.Total, StringFormat='c', ConverterCulture='ru-RU'}"
+                                   
+                                    Header="ИТОГО" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="TextBlockTotalCost" Grid.Row="7" Style="{StaticResource MaterialDesignHeadline6TextBlock}" Margin="20 0 0 0"
+                   Grid.ColumnSpan="2"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="8"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center">
+            <Button Width="100" Height="30" 
+                    Content="OK" 
+                    x:Name="BtnOk" 
+                    Click="BtnOk_Click"/>
+            <Button x:Name="BtnSavePDF"  
+                    Content="Сохранить в PDF" Width="160"
+                    Click="BtnSavePDF_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

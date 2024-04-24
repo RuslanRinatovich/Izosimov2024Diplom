@@ -138,11 +138,11 @@ namespace DoorRepairApp.Pages
             // кнопка Корзина
             NewOrderWindow newOrderWindow = new NewOrderWindow();
             newOrderWindow.ShowDialog();
-            if (DoorBasket.GetCount > 0)
+            if (DoorBasket.GetCount + ServiceBasket.GetCount > 0)
             {
                 BtnBasket.Visibility = Visibility.Visible;
                 TextBlockBasketInfo.Visibility = Visibility.Visible;
-                BadgeBasketCount.Badge = DoorBasket.GetCount;
+                BadgeBasketCount.Badge = DoorBasket.GetCount + ServiceBasket.GetCount;
             }
             else
             {

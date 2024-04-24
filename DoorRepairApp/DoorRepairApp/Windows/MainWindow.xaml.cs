@@ -26,7 +26,7 @@ namespace DoorRepairApp
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new DoorCataloguePage());
+            MainFrame.Navigate(new CataloguePage());
             Manager.CurrentUser = null;
             Manager.MainFrame = MainFrame;
         }
@@ -63,6 +63,7 @@ namespace DoorRepairApp
                 BtnEnter.Visibility = Visibility.Collapsed;
                 BtnBooking.Visibility = Visibility.Collapsed;
                 BtnQuests.Visibility = Visibility.Collapsed;
+                BtnServices.Visibility = Visibility.Collapsed;
                 BtnMyAccount.Visibility = Visibility.Collapsed;
                 BtnUsers.Visibility = Visibility.Collapsed;
                 BtnMyBooking.Visibility = Visibility.Collapsed;
@@ -93,6 +94,7 @@ namespace DoorRepairApp
                 {
                     BtnBooking.Visibility = Visibility.Visible;
                     BtnQuests.Visibility = Visibility.Visible;
+                    BtnServices.Visibility = Visibility.Visible;
                     BtnMyAccount.Visibility = Visibility.Visible;
                     BtnMyBooking.Visibility = Visibility.Collapsed;
                     BtnUsers.Visibility = Visibility.Visible;
@@ -101,6 +103,7 @@ namespace DoorRepairApp
                 {
                     BtnBooking.Visibility = Visibility.Collapsed;
                     BtnQuests.Visibility = Visibility.Collapsed;
+                    BtnServices.Visibility = Visibility.Collapsed;
                     BtnUsers.Visibility = Visibility.Collapsed;
                     BtnMyAccount.Visibility = Visibility.Visible;
                     BtnMyBooking.Visibility = Visibility.Visible;
@@ -131,6 +134,7 @@ MessageBoxImage.Question);
                     BtnBack.Visibility = Visibility.Collapsed;
                     BtnBooking.Visibility = Visibility.Collapsed;
                     BtnQuests.Visibility = Visibility.Collapsed;
+                    BtnServices.Visibility = Visibility.Collapsed;
                     BtnMyAccount.Visibility = Visibility.Collapsed;
                     BtnMyBooking.Visibility = Visibility.Collapsed;
                     BtnUsers.Visibility = Visibility.Collapsed;
@@ -149,6 +153,7 @@ MessageBoxImage.Question);
                 {
                     BtnBooking.Visibility = Visibility.Visible;
                     BtnQuests.Visibility = Visibility.Visible;
+                    BtnServices.Visibility = Visibility.Visible;
                     BtnMyAccount.Visibility = Visibility.Visible;
                     BtnUsers.Visibility = Visibility.Visible;
                     BtnMyBooking.Visibility = Visibility.Collapsed;
@@ -157,6 +162,7 @@ MessageBoxImage.Question);
                 {
                     BtnBooking.Visibility = Visibility.Collapsed;
                     BtnQuests.Visibility = Visibility.Collapsed;
+                    BtnServices.Visibility = Visibility.Collapsed;
                     BtnUsers.Visibility = Visibility.Collapsed;
                     BtnMyAccount.Visibility = Visibility.Visible;
                     BtnMyBooking.Visibility = Visibility.Visible;
@@ -172,64 +178,49 @@ MessageBoxImage.Question);
 
 
 
-        private void BtnMyOrder_Click(object sender, RoutedEventArgs e)
-        {
-            //MainFrame.Navigate(new StatusPage());
-
-
-        }
+      
 
         private void BtnMyAccount_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
-            //    MyAccountWindow window = new MyAccountWindow();
+            try
+            {
+                MyAccountWindow window = new MyAccountWindow();
 
-            //    if (window.ShowDialog() == true)
-            //    {
+                if (window.ShowDialog() == true)
+                {
 
-            //        MessageBox.Show("Запись изменена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Ошибка");
-            //}
+                    MessageBox.Show("Запись изменена", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
+            }
         }
 
-        private void BtnOrder_Click(object sender, RoutedEventArgs e)
-        {
-
-            // MainFrame.Navigate(new OrderPage());
-
-
-        }
 
         private void BtnMyOrders_Click(object sender, RoutedEventArgs e)
         {
-         //   MainFrame.Navigate(new MyBookingPage());
+           MainFrame.Navigate(new MyBookingPage());
         }
 
-        private void BtnBuyes_Click(object sender, RoutedEventArgs e)
-        {
-            //  MainFrame.Navigate(new BuyPage());
-        }
+      
 
         private void BtnQuests_Click(object sender, RoutedEventArgs e)
         {
-         //   MainFrame.Navigate(new QuestsPage());
+            MainFrame.Navigate(new DoorsPage());
         }
 
         private void BtnBooking_Click(object sender, RoutedEventArgs e)
         {
-        //    MainFrame.Navigate(new BookingPage());
+            MainFrame.Navigate(new BookingPage());
         }
 
 
 
         private void BtnUsers_Click(object sender, RoutedEventArgs e)
         {
-         //   MainFrame.Navigate(new UsersPage());
+           MainFrame.Navigate(new UsersPage());
         }
 
         private void BtnDoorCatalogue_Click(object sender, RoutedEventArgs e)
@@ -241,6 +232,11 @@ MessageBoxImage.Question);
         {
             MainFrame.Navigate(new ServicesCataloguePage());
 
+        }
+
+        private void BtnServices_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ServicesPage());
         }
     }
 }

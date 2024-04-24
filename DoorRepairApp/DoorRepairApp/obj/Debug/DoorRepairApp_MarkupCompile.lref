@@ -1,9 +1,22 @@
 ﻿
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\App.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\DoorCataloguePage.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\ServicesCataloguePage.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\LoginWindow.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\MainWindow.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\NewOrderWindow.xaml;;
-FD:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\OrderTicketWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\App.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\AddDoorPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\CataloguePage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\CategoriesPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\DoorCataloguePage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\DoorsPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\MyBookingPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\ServicesCataloguePage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\ServicesPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\ShowOrderPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\CategoryWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\LoginWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\MainWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\NewOrderWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\OrderTicketWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\ServiceWindow.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\BookingPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\AddUserPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Pages\UsersPage.xaml;;
+Fd:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\Windows\MyAccountWindow.xaml;;
 

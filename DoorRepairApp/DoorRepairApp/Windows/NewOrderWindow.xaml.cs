@@ -226,11 +226,15 @@ namespace DoorRepairApp.Windows
             int month = DatePickerDate.SelectedDate.Value.Date.Month;
             int year = DatePickerDate.SelectedDate.Value.Date.Year;
 
-            DateTime date = new DateTime(year, month, day);
+            int hours = TimePickerTime.SelectedTime.Value.Hour;
+            int minutes = TimePickerTime.SelectedTime.Value.Minute;
+            int seconds = TimePickerTime.SelectedTime.Value.Second;
+            DateTime date = new DateTime(year, month, day, hours, minutes, seconds);
+            _currentOrder.DateOrder = date;
             _currentOrder.DateOrder = date;
             _currentOrder.Username = Manager.CurrentUser.Username;
             _currentOrder.Total = Convert.ToInt32(DoorBasket.GetTotalCost);
-            MessageBoxResult messageBoxResult = MessageBox.Show($"Оформить бронь???",
+            MessageBoxResult messageBoxResult = MessageBox.Show($"Оформить заказ???",
                 "Оформление", MessageBoxButton.OKCancel, MessageBoxImage.Question);
             if (messageBoxResult == MessageBoxResult.OK)
             {

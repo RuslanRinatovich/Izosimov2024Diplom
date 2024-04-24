@@ -30,20 +30,19 @@
                                      Text="Фирма по установке и обслуживанию дверей"
                                      Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
 
-                    <Button x:Name="BtnDoorCatalogue"  Click="BtnDoorCatalogue_Click"  Foreground="White"
-                            ToolTip="Каталог дверей" Style="{StaticResource MaterialDesignFlatButton}"
-                            Content="{materialDesign:PackIcon Kind=Door, Size=24}"/>
-                    <Button x:Name="BtnServiceCatalogue"  Click="BtnServiceCatalogue_Click"  Foreground="White"
-                            ToolTip="Каталог дверей" Style="{StaticResource MaterialDesignFlatButton}"
-                            Content="{materialDesign:PackIcon Kind=ServiceToolbox, Size=24}"/>
+                   
                     
                     <Button x:Name="BtnQuests"  Click="BtnQuests_Click"  Foreground="White"
-                            ToolTip="Оружие" Style="{StaticResource MaterialDesignFlatButton}"
-                            Content="{materialDesign:PackIcon Kind=Pistol, Size=24}" Visibility="Collapsed"/>
+                            ToolTip="Двери" Style="{StaticResource MaterialDesignFlatButton}"
+                            Content="{materialDesign:PackIcon Kind=Door, Size=24}" Visibility="Collapsed"/>
 
-                    <Button x:Name="BtnBooking"  Click="BtnBooking_Click" Visibility="Collapsed"
-                            ToolTip="Бронирование" Style="{StaticResource MaterialDesignFlatButton}"
-                            Content="{materialDesign:PackIcon Kind=BookAccount, Size=24}"/>
+                    <Button x:Name="BtnServices"  Click="BtnServices_Click"  Foreground="White"
+                            ToolTip="Двери" Style="{StaticResource MaterialDesignFlatButton}"
+                            Content="{materialDesign:PackIcon Kind=ServiceToolbox, Size=24}" Visibility="Collapsed"/>
+
+                    <Button x:Name="BtnBooking"  Click="BtnBooking_Click" Visibility="Collapsed" Foreground="White"
+                            ToolTip="Заказы" Style="{StaticResource MaterialDesignFlatButton}"
+                            Content="{materialDesign:PackIcon Kind=BookAccount, Size=24}" />
 
 
                     <Button x:Name="BtnUsers"  Click="BtnUsers_Click" ToolTip="Пользователи" Foreground="White"

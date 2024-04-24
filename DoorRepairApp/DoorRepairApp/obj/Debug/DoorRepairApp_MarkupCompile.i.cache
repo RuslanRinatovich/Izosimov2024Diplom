@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\obj\Debug\
+d:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\obj\Debug\
 DoorRepairApp
 none
 false
 DEBUG;TRACE
-D:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\App.xaml
-6-2051565006
+d:\ДИПЛОМЫ 2024\Изосимов\DoorRepairApp\DoorRepairApp\App.xaml
+19-696801342
 2-1221820886
-29-941316254
-27-513860626
-Pages\DoorCataloguePage.xaml;Pages\ServicesCataloguePage.xaml;Windows\LoginWindow.xaml;Windows\MainWindow.xaml;Windows\NewOrderWindow.xaml;Windows\OrderTicketWindow.xaml;
+45-567688970
+30-2072489087
+Pages\AddDoorPage.xaml;Pages\AddUserPage.xaml;Pages\BookingPage.xaml;Pages\CataloguePage.xaml;Pages\CategoriesPage.xaml;Pages\DoorCataloguePage.xaml;Pages\DoorsPage.xaml;Pages\MyBookingPage.xaml;Pages\ServicesCataloguePage.xaml;Pages\ServicesPage.xaml;Pages\ShowOrderPage.xaml;Pages\UsersPage.xaml;Windows\CategoryWindow.xaml;Windows\LoginWindow.xaml;Windows\MainWindow.xaml;Windows\MyAccountWindow.xaml;Windows\NewOrderWindow.xaml;Windows\OrderTicketWindow.xaml;Windows\ServiceWindow.xaml;
 
 True
 

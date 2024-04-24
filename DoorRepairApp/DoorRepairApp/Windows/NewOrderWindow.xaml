@@ -18,7 +18,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="34"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition/>
@@ -29,7 +30,7 @@
         <Image Source="/DoorRepairApp;component/Resources/door.ico" 
                Margin="10" 
                HorizontalAlignment="Left" />
-        <TextBlock Grid.Row="0" Text="Фирма"  Grid.ColumnSpan="2"
+        <TextBlock Grid.Row="0" Text="Фирма по установке и обслуживанию дверей"  Grid.ColumnSpan="2"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                   
@@ -41,34 +42,42 @@
                    VerticalAlignment="Center"
                    FontSize="20"
                    FontWeight="Bold" />
-        <TextBlock  Text="Услуги"  Grid.Row="4" Grid.Column="0" 
+        <Rectangle  Grid.Row="3" Grid.ColumnSpan="2" Fill="{DynamicResource MaterialDesignDarkSeparatorBackground}"/>
+        <TextBlock  Text="Двери"  Grid.Row="3" Grid.Column="0" 
                     Grid.ColumnSpan="2"  
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="20"
+                   FontSize="16"
+                   FontWeight="Bold" />
+        <Rectangle  Grid.Row="5" Grid.ColumnSpan="2" Fill="{DynamicResource MaterialDesignDarkSeparatorBackground}" />
+        <TextBlock  Text="Услуги"  Grid.Row="5" Grid.Column="0" 
+                    Grid.ColumnSpan="2"  
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="16"
                    FontWeight="Bold" />
         <TextBlock Text="Дата заказа"  Grid.Row="2" Grid.Column="0" 
                    HorizontalAlignment="Left" Margin="60 0 0 0" 
                    VerticalAlignment="Center"
                   Style="{StaticResource  MaterialDesignSubtitle2TextBlock}"
                    FontWeight="Bold" />
-        <!--<TextBlock x:Name="TextBlockOrderCreateDate" Grid.Row="2" Grid.Column="1" 
-                   VerticalAlignment="Center" HorizontalAlignment="Left"
-                   Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
-                   FontWeight="Bold"  />-->
+   
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <DatePicker Width="200" x:Name="DatePickerDate"
+                <DatePicker Width="180" x:Name="DatePickerDate"
                     materialDesign:HintAssist.Hint="Выберите дату"
-                    Style="{StaticResource  MaterialDesignFilledDatePicker}" FontSize="16"  FontWeight="Bold"/>
+                     />
+                <materialDesign:TimePicker x:Name="TimePickerTime" Width="180"
+                                   materialDesign:HintAssist.Hint="Выберите время " 
+                                    Is24Hours="True" />
 
             <TextBlock x:Name="TextBlockAnswer" VerticalAlignment="Center" Style="{DynamicResource  MaterialDesignCaptionTextBlock}"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="4"/>
         <ListBox x:Name="ListBoxOrderProducts"   
                  ScrollViewer.VerticalScrollBarVisibility="Visible"  
                  SelectedValuePath="Key"  
-                 Grid.Row="3" Grid.Column="0"
+                 Grid.Row="4" Grid.Column="0"
                  Grid.ColumnSpan="2"  
                  ItemContainerStyle="{StaticResource MaterialDesignCardsListBoxItem}" >
             <ListBox.ItemTemplate >
@@ -124,7 +133,7 @@
         <ListBox x:Name="ListBoxOrderServices"   
                  ScrollViewer.VerticalScrollBarVisibility="Visible"  
                  SelectedValuePath="Key"  
-                 Grid.Row="5" Grid.Column="0"
+                 Grid.Row="6" Grid.Column="0"
                  Grid.ColumnSpan="2"  
                  ItemContainerStyle="{StaticResource MaterialDesignCardsListBoxItem}" >
             <ListBox.ItemTemplate >
@@ -142,7 +151,7 @@
                                 Click="BtnDeleteService_Click"
                                 Tag="{Binding Path=Key}"
                                 Margin="0"/>
-                     
+
                         <StackPanel Grid.Column="1" >
 
                             <TextBlock Margin="2" FontSize="16" 
@@ -173,8 +182,8 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBlock x:Name="TextBlockTotalCost" Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource MaterialDesignHeadline6TextBlock}" Margin="20 0 0 0"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="7"
+        <TextBlock x:Name="TextBlockTotalCost" Grid.Row="7" Grid.ColumnSpan="2" Style="{StaticResource MaterialDesignHeadline6TextBlock}" Margin="20 0 0 0"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="8"
                     Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <Button Width="100" Height="30" 
                     Content="Закрыть" 
